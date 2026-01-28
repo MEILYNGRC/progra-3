@@ -11,6 +11,6 @@ package miprimerprograma;
  */
 public class MiPrimerPrograma {
         public static void main(String[] args) {
-            System.out.println("MEILYN JULEISY GARCIA LIMA 9959-23-17838");
+            System.out.println("MEILYN JULEISY GARCIA LIMA, 9959-23-17838");
     }
 }
