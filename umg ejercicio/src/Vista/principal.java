@@ -5,21 +5,33 @@
 package Vista;
 
 import Controlador.maestroControl;
+import Controlador.jornadaControl;
 
+/**
+ *
+ * @author usuario
+ */
 public class principal {
 
     public static void main(String[] args) {
 
-        maestroControl controlador = new maestroControl();
+        maestroControl maestro = new maestroControl();
+        jornadaControl jornada = new jornadaControl();
 
-      //controlador.insertarMaestro("angie","zona 2","0");
+        maestro.insertarMaestro("Ana García","zona 17","0");
 
-        controlador.mostrarMaestros();
+       // maestro.mostrarMaestros();
+       // maestro.actualizarMaestro(2, "karen", "Zona 18", "0");
+        
+        //maestro.eliminarMaestro();
+//______________________________________________________________________________________
+        
+        //jornada.insertarJornada("Matutina");
+        //jornada.insertarJornada("Vespertina");
 
-        controlador.actualizarMaestro(10,"julia","Zona 17","1");
+        //jornada.mostrarJornadas();
 
-        //controlador.eliminarMaestro(12);
-
+        //jornada.actualizarJornada(1, "VESPERTINA");
+        //jornada.eliminarJornada(3);
     }
-
 }

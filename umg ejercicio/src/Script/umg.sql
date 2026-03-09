@@ -33,17 +33,24 @@ CREATE TABLE cursos(
     PRIMARY KEY(cur_codigo)
 );
 
+CREATE TABLE jornadas(
+    JorCodigo int auto_increment,
+    JorNombre varchar(100),
+    PRIMARY KEY(JorCodigo)
+    );
 CREATE TABLE asignacion(
     car_codigo INT,
     cur_codigo INT,
     mae_codigo INT,
     alu_codigo INT,
+    JorCodigo INT,
     asa_nota DECIMAL(5,2),
 
-    PRIMARY KEY(car_codigo,cur_codigo,mae_codigo,alu_codigo),
+    PRIMARY KEY(car_codigo,cur_codigo,mae_codigo,alu_codigo,JorCodigo),
 
     FOREIGN KEY(car_codigo) REFERENCES carreras(car_codigo),
     FOREIGN KEY(cur_codigo) REFERENCES cursos(cur_codigo),
     FOREIGN KEY(mae_codigo) REFERENCES maestros(mae_codigo),
-    FOREIGN KEY(alu_codigo) REFERENCES alumnos(alu_codigo)
+    FOREIGN KEY(alu_codigo) REFERENCES alumnos(alu_codigo),
+    FOREIGN KEY(JorCodigo) REFERENCES jornadas(JorCodigo)
 );

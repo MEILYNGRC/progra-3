@@ -7,6 +7,7 @@ package Controlador;
 import Modelo.maestroDAO;
 import Modelo.maestro;
 import java.util.List;
+import Modelo.jornadaDAO;
 /**
  *
  * @author meilyn
@@ -49,5 +50,5 @@ public class maestroControl {
 
         maestrodao.delete(m);
     }
-
+    
 }
